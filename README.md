@@ -17,6 +17,31 @@ Ensure the following dependencies are installed before building the project:
 - **C++17 or later**
 - **Ninja (optional, recommended for faster builds)**
 
+## Code structure
+```
+ShotAssetManager/
+│── CMakeLists.txt          # CMake build configuration
+│── CMakePresets.json       # CMake presets for easy builds
+│── README.md               # Documentation
+│── qml.qrc                 # Qt resource file (includes main.qml)
+│
+├── proto/
+│   ├── asset_manager.proto  # gRPC service definition
+│
+├── src/
+│   ├── main.cpp             # Entry point of the application
+│   ├── USDManager.h/.cpp    # Manages OpenUSD operations and connects to gRPC
+│   ├── AssetManagerServer.cpp  # Implements the gRPC server
+│   ├── AssetManagerClient.cpp  # Implements the gRPC client
+│
+├── qml/
+│   ├── main.qml             # QML-based user interface gRPC
+│   ├── AssetManagerServer.cpp  # Implements the gRPC server
+│   ├── AssetManagerClient.cpp  # Implements the gRPC client
+│
+├── qml/
+│   ├── main.qml             # QML-based user interface
+
 ## Building the Project
 ### Using CMake Presets (Recommended)
 ```sh
