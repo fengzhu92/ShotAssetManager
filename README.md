@@ -35,11 +35,6 @@ ShotAssetManager/
 │   ├── AssetManagerClient.cpp  # Implements the gRPC client
 │
 ├── qml/
-│   ├── main.qml             # QML-based user interface gRPC
-│   ├── AssetManagerServer.cpp  # Implements the gRPC server
-│   ├── AssetManagerClient.cpp  # Implements the gRPC client
-│
-├── qml/
 │   ├── main.qml             # QML-based user interface
 
 ## Building the Project
